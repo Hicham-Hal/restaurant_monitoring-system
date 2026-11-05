@@ -1,0 +1,37 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs
+data/outputs/
+runs/
+outputs/
+
+# Large datasets and video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# YOLO model weights
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
