@@ -1,7 +1,3 @@
-"""
-config.py - Global configuration file for the AI-Powered Restaurant Monitoring System.
-Contains file paths, model configurations, ROI coordinates, thresholds, and color schemes.
-"""
 
 from pathlib import Path
 
@@ -15,7 +11,7 @@ RAW_VIDEOS_DIR = DATA_DIR / "raw_videos"
 OUTPUTS_DIR = DATA_DIR / "outputs"
 
 MODELS_DIR = BASE_DIR / "models"
-DEFAULT_YOLO_MODEL = "yolov8n.pt"  # Pretrained YOLOv8 Nano model (downloads automatically if missing)
+DEFAULT_YOLO_MODEL = "yolov8n.pt" 
 MODEL_PATH = MODELS_DIR / DEFAULT_YOLO_MODEL
 
 # Database path for historical statistics logging
