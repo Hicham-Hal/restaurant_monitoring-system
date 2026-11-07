@@ -5,6 +5,8 @@ from src.config import MODEL_PATH, CONF_THRESHOLD, IOU_THRESHOLD, TARGET_CLASSES
 
 
 class YOLODetector:
+    # constructor
+    # Loads the YOLO model and prepares it for use.
     def __init__(self, model_path=MODEL_PATH):
         """
         Initializes the YOLOv8 model.
@@ -19,6 +21,8 @@ class YOLODetector:
             print(f"[-] Error loading YOLO model: {e}")
             raise e
 
+    # detection
+    # Analyzes one frame and returns information about the detected objects.
     def detect(self, frame):
         """
         Runs object detection on a single video frame.
@@ -31,7 +35,12 @@ class YOLODetector:
                           confidence score, and class id.
         """
         # Run YOLO inference
-        results = self.model(frame, conf=CONF_THRESHOLD, iou=IOU_THRESHOLD, verbose=False)[0]
+        results = self.model(
+            frame,
+            conf=CONF_THRESHOLD,
+            iou=IOU_THRESHOLD,
+            verbose=False
+        )[0]
         
         detections = []
         
@@ -53,6 +62,8 @@ class YOLODetector:
                     
         return detections
 
+    # visualization
+    # Draws the detection results on the original frame.
     def draw_detections(self, frame, detections):
         """
         Draws bounding boxes and labels for detected objects on the frame.
