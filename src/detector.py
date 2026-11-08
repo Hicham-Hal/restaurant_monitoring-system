@@ -104,7 +104,7 @@ class YOLODetector:
 
 
 # ==========================================
-# Standalone Unit Test Script for Phase 2
+# Standalone Unit Test Script for Phase 2(just for testing)
 # ==========================================
 if __name__ == "__main__":
     import sys
@@ -112,7 +112,7 @@ if __name__ == "__main__":
     detector = YOLODetector()
     
     # Create a dummy test frame (black image 640x480)
-    dummy_frame = np.zeros((480, 640, 3), dtype=np.uint8)
+    dummy_frame = np.zeros((480, 640, 3), dtype=np.uint8) #generate a black image
     dets = detector.detect(dummy_frame)
     print(f"Detections on empty frame: {len(dets)} (Expected: 0)")
     print("[+] Phase 2 detector module verified successfully.")
